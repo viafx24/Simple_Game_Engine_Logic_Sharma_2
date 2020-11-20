@@ -6,13 +6,15 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 
-enum SwagBallTypes {DEFAULT = 0, DAMAGING, HEALING, NROFTYPES};
+enum SwagBallTypes {DEFAULT = 0, DAMAGING, HEALING, NROFTYPES};// Le quatrième type ne semble pas utilisé.
 
 class SwagBall
 {
 private:
+
+	// les swagball sont bien des cercles
 	sf::CircleShape shape;
-	int type;
+	int type; // sert comme entier pour l'enum (de 0 à 3)
 
 	void initShape(const sf::RenderWindow& window);
 
